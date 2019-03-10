@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title>Parking Spot Detector</title>
+<style>
+input[type=datepicker], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+</style>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+</head>
+
+
+
+<body>
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="tabs('homepage')">home</button>
+  <button class="w3-bar-item w3-button" onclick="tabs('from')">form</button>
+</div>
+
+<div id="homepage" class="w3-container city">
+<img src="static/ParkingSpotGif.gif" class="w3-border w3-padding" alt="Norway">
+<p style="font-size:160%;">Searching for parking spaces can be 
+very time consuming and frustrating process.People waste a lot of valuable time,
+and gasoline searching for parking spaces. If you are interested in in our program 
+please subscribe and join our service.</p>
+</div>
+
+<div id="from" class="w3-container city" style="display:none">
+    
+        <form name = "loginform" class="w3-container" action="/" method = "post">
+        <div class="w3-section">
+        <label style = "color: black" class ="we-color-black" ><b>First Name</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="First Name" name="name" required>
+         <label style = "color: black" class ="we-color-black" ><b>Last Name</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Last Name" name="lastName" required>
+        <label style = "color: black" class ="we-color-black" ><b>Email</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Email" name="email" required>
+        <label style = "color: black" class ="we-color-black" ><b>Select Phone Number</b></label>
+        <select id="phoneCarrier" name="PhoneCarrier">
+        <option value="verizon">select phone number</option>
+        <option value="verizon">Verizon</option>
+        <option value="t-mobile">T-Mobile</option>
+        <option value="sprint">Sprint</option>
+        <option value="at&t">AT&T</option>
+        </select><br></br>
+        <label style = "color: black" class ="we-color-black" ><b>Phone Number</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Phone Number" name="phone" required>
+        <label for="datepicker">Date Notification</label>
+        <input type="datepicker" id="datepicker" name="DateNotified" placeholder="Select day to get Notified..">
+        <button class="w3-btn-block w3-black w3-section w3-padding" type="submit" name = "submit" value = "submit">SignUp</button>
+        
+        </div>
+        <br></br>
+        
+        <br></br>
+        </form>
+
+
+
+</div>
+
+<script>
+function tabs(action) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(action).style.display = "block";  
+}
+</script>
+
+</body>
+</html>
